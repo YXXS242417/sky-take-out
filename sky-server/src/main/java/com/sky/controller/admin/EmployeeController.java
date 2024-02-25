@@ -112,4 +112,11 @@ public class EmployeeController {
         employeeService.status(status,id);
         return Result.success();
     }
+
+    @GetMapping("/{id}")
+    public Result<Employee> getById(@PathVariable Long id){
+        log.info("根据ID查询员工信息",id);
+
+        return Result.success(employeeService.getById(id));
+    }
 }
