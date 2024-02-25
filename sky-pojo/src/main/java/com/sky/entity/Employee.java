@@ -20,6 +20,7 @@ public class Employee implements Serializable {
 
     private String username;
 
+    //TODO 后端没有校验，账号不能用中文
     private String name;
 
     private String password;
