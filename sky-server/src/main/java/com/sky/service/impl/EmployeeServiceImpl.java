@@ -141,4 +141,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return employeeMapper.getById(id);
     }
+
+    /**
+     * 编辑员工
+     * @param employeeDTO
+     */
+    @Override
+    public void update(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+
+        BeanUtils.copyProperties(employeeDTO,employee);
+
+        employeeMapper.update(employee);
+    }
 }
