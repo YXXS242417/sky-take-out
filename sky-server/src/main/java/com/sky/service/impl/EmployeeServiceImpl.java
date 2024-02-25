@@ -113,4 +113,21 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> records = page.getResult();
         return new PageResult(total,records);
     }
+
+    /**
+     * 员工账号启用禁用状态
+     * @param status
+     * @param id
+     */
+    @Override
+    public void status(Integer status, Long id) {
+
+        //根据ID查出该员工数据
+
+        //修改该员工数据的status状态
+
+        Employee employee = Employee.builder().status(status).id(id).build();
+
+        employeeMapper.update(employee);
+    }
 }
