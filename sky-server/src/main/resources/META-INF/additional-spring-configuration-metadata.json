@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.alioss.endpoint",
+      "type": "java.lang.String",
+      "description": "Description for spring.alioss.endpoint."
+  }
+] }
